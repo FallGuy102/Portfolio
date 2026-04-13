@@ -3,105 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Folk Portfolio</title>
+  <title>Folk Game Portfolio</title>
   <meta
     name="description"
-    content="Folk 的个人作品集，展示网页设计、前端开发与创意项目。"
+    content="Folk 的游戏向个人作品集，展示视觉叙事、前端实现与沉浸式网页项目。"
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="noise"></div>
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="#top">Folk</a>
-      <nav class="site-nav">
-        <a href="#about">关于我</a>
-        <a href="#work">作品</a>
-        <a href="#contact">联系</a>
+      <a class="brand" href="#top">
+        <span class="brand-mark">F</span>
+        <span class="brand-text">Folk</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Creative Developer Portfolio</p>
-          <h1>把设计感和前端体验，做成可被记住的网页作品。</h1>
-          <p class="hero-text">
-            我专注于网页设计、前端开发和交互表达，希望把每一个页面都做得有温度、有节奏，也有清晰的功能逻辑。
+      <section class="hero section reveal-target">
+        <p class="kicker">Game Portfolio / Frontend Visual Design</p>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="hero-shadow" aria-hidden="true">PLAY</p>
+            <h1>为游戏世界制作能点燃情绪的网页体验。</h1>
+            <p class="hero-text">
+              我把游戏视觉、前端交互和叙事节奏组合在一起，让作品集不只是“展示页面”，而像一段可操作的预告片。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">
+                查看作品
+                <span class="button-line" aria-hidden="true"></span>
+              </a>
+              <a class="button button-outline" href="#contact">联系我</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel reveal-target">
+            <div class="panel-topbar"></div>
+            <p class="panel-label">Current Loadout</p>
+            <ul class="panel-list">
+              <li>游戏感视觉首页</li>
+              <li>沉浸式项目展示页</li>
+              <li>HTML / CSS / JavaScript</li>
+            </ul>
+            <dl class="panel-stats">
+              <div>
+                <dt>Focus</dt>
+                <dd>Editorial UI</dd>
+              </div>
+              <div>
+                <dt>Style</dt>
+                <dd>Dark / Sharp / Bold</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-bordered reveal-target" id="about">
+        <div class="section-head">
+          <p class="kicker">About</p>
+          <h2>不是把页面做满，而是把世界观做出来。</h2>
+        </div>
+        <div class="split-layout">
+          <p class="lead">
+            我正在构建一个偏游戏视觉方向的个人作品集，重视标题冲击力、画面节奏、信息层级和交互反馈。页面需要像海报一样先抓住人，再用细节让人愿意继续看下去。
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#work">查看作品</a>
-            <a class="button ghost" href="#contact">联系我</a>
+          <div class="detail-block">
+            <p class="detail-label">Working Method</p>
+            <p>
+              先建立视觉情绪，再组织内容流向，最后用前端动画和响应式细节把体验收束成完整作品。
+            </p>
           </div>
         </div>
-
-        <aside class="hero-card">
-          <p class="card-label">当前聚焦</p>
-          <ul>
-            <li>响应式网页设计</li>
-            <li>品牌感视觉呈现</li>
-            <li>HTML / CSS / JavaScript</li>
-          </ul>
-        </aside>
       </section>
 
-      <section class="about section-block" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>我是 Folk，一名正在持续打磨视觉与代码表达的创作者。</h2>
-        </div>
-        <p class="section-text">
-          这个作品集会逐步收录我的网页项目、练习作品与设计实验。我的目标不是只把页面“做出来”，而是让它在内容、节奏和细节上都更完整。
-        </p>
-      </section>
-
-      <section class="work section-block" id="work">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
+      <section class="section reveal-target" id="projects">
+        <div class="section-head">
+          <p class="kicker">Selected Projects</p>
           <h2>项目展示</h2>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <p class="project-index">01</p>
-            <h3>Landing Page Concept</h3>
-            <p>一个注重排版层次和品牌氛围的首页概念页，强调首屏视觉和转化路径。</p>
+        <div class="projects-list">
+          <article class="project-card reveal-target">
+            <div class="project-meta">
+              <p class="project-number">01</p>
+              <p class="project-tag">Campaign Landing</p>
+            </div>
+            <div class="project-body">
+              <h3>Crimson Raid</h3>
+              <p>
+                为虚构动作游戏设计的活动首页，主打高对比排版、章节式滚动和剧情预告感。
+              </p>
+            </div>
           </article>
 
-          <article class="project-card">
-            <p class="project-index">02</p>
-            <h3>Personal Brand Site</h3>
-            <p>为个人品牌设计的网站练习，聚焦内容结构、可读性与移动端适配体验。</p>
+          <article class="project-card reveal-target">
+            <div class="project-meta">
+              <p class="project-number">02</p>
+              <p class="project-tag">Portfolio Narrative</p>
+            </div>
+            <div class="project-body">
+              <h3>Echo Arena Showcase</h3>
+              <p>
+                用展览式结构展示角色、场景和玩法亮点，让作品页像一份交互海报集。
+              </p>
+            </div>
           </article>
 
-          <article class="project-card">
-            <p class="project-index">03</p>
-            <h3>Interactive UI Study</h3>
-            <p>围绕动画节奏、卡片布局和悬停反馈做的小型交互实验。</p>
+          <article class="project-card reveal-target">
+            <div class="project-meta">
+              <p class="project-number">03</p>
+              <p class="project-tag">UI Motion Study</p>
+            </div>
+            <div class="project-body">
+              <h3>System Interface Lab</h3>
+              <p>
+                聚焦 HUD、状态卡、悬停反馈与信息层叠，探索更有游戏气质的网页 UI 语言。
+              </p>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="contact section-block" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>如果你想合作，欢迎联系我。</h2>
+      <section class="section section-muted reveal-target" id="process">
+        <div class="section-head">
+          <p class="kicker">Process</p>
+          <h2>我的制作方式</h2>
         </div>
-        <p class="section-text">
-          你可以把这里换成自己的邮箱、社交账号或作品平台链接。
+
+        <div class="process-list">
+          <article class="process-item">
+            <p class="process-index">01</p>
+            <div>
+              <h3>定义情绪</h3>
+              <p>先决定页面是更像战术终端、剧情海报，还是角色档案馆，再选字体、颜色和留白。</p>
+            </div>
+          </article>
+
+          <article class="process-item">
+            <p class="process-index">02</p>
+            <div>
+              <h3>建立层级</h3>
+              <p>用超大标题、精确分区和强烈尺度差，确保用户第一眼就知道哪里最重要。</p>
+            </div>
+          </article>
+
+          <article class="process-item">
+            <p class="process-index">03</p>
+            <div>
+              <h3>打磨交互</h3>
+              <p>用快速、克制、锋利的动画做反馈，让界面更像系统被唤醒，而不是普通网页在播放特效。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-cta reveal-target" id="contact">
+        <p class="cta-shadow" aria-hidden="true">READY</p>
+        <div class="section-head">
+          <p class="kicker">Contact</p>
+          <h2>如果你想一起做更有气氛的游戏网页，欢迎联系我。</h2>
+        </div>
+        <p class="lead cta-copy">
+          适合放你的邮箱、Behance、Bilibili、GitHub 或其他展示渠道。
         </p>
-        <a class="contact-link" href="mailto:hello@folk.dev">hello@folk.dev</a>
+        <a class="button button-primary" href="mailto:hello@folk.dev">
+          hello@folk.dev
+          <span class="button-line" aria-hidden="true"></span>
+        </a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Folk Portfolio</p>
+      <p>© <span id="year"></span> Folk Game Portfolio</p>
     </footer>
   </div>
 

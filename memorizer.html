@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memorizer | 陈品元作品集</title>
+    <meta
+      name="description"
+      content="Memorizer 项目详情页，详细展示围绕 Record / Replay 设计的玩法规则、关卡结构、UI、技术实现与测试迭代。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell memorizer-page">
+      <header class="site-header">
+        <div class="container nav-row">
+          <a class="brand" href="index.html">CHEN PINYUAN</a>
+          <nav class="site-nav" aria-label="项目导航">
+            <a href="#overview">概览</a>
+            <a href="#mechanic">玩法</a>
+            <a href="#levels">关卡</a>
+            <a href="#design">设计</a>
+            <a href="#tech">技术</a>
+            <a href="index.html">返回首页</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section-hero project-hero memorizer-hero">
+          <div class="container">
+            <p class="eyebrow reveal">CASE 02 / 2D PUZZLE PLATFORMER</p>
+            <h1 class="hero-title project-title reveal">
+              MEMORIZER
+              <span>Record / Replay Puzzle System</span>
+            </h1>
+            <div class="project-meta reveal reveal-delay">
+              <p>类型: 2D 平台解谜游戏</p>
+              <p>核心: Record / Replay 时间能力</p>
+              <p>重点: 核心玩法 / 关卡递进 / UI 反馈 / 技术落地 / 测试迭代</p>
+            </div>
+            <div class="image-slot-grid reveal reveal-delay-2">
+              <figure class="image-slot">
+                <figcaption>封面图接口 / Hero Cover</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>核心机制演示图接口</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="hero-marquee" aria-hidden="true">REPLAY</div>
+        </section>
+
+        <section id="overview" class="section bordered-top">
+          <div class="container split-grid">
+            <div class="section-heading reveal">
+              <p class="eyebrow">PROJECT GOAL</p>
+              <h2>目标不是做一款“时间题材”的平台游戏，而是让玩家真正操作“过去的自己”来解谜。</h2>
+            </div>
+            <div class="about-copy reveal reveal-delay">
+              <p>
+                在《Memorizer》里，整个体验建立在 `Record` 和 `Replay`
+                上。玩家需要先记录自己的动作，再在合适的时机把这段过去重新播放出来，让“已经发生过的行为”变成当前空间里的解法。
+              </p>
+              <p>
+                这个项目最吸引人的地方，在于它不是简单增加一个技能按钮，而是要求关卡、引导、操作反馈到叙事推进都围绕同一套系统来思考。只要其中一个环节没有对齐，玩家就会觉得这只是个概念，而不是一个真正成立的游戏机制。
+              </p>
+              <blockquote class="pull-quote">
+                “重点在于，玩家能不能在第一次成功利用 Replay 解开谜题时，清楚意识到自己正在和‘过去的自己’协作。”
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-muted bordered-top bordered-bottom">
+          <div class="container case-grid">
+            <article class="case-panel reveal">
+              <p class="eyebrow">INSPIRATION</p>
+              <h3>灵感来源</h3>
+              <p>
+                最初希望围绕“时间”做一款 2D 平台解谜游戏，但不想重复常见的倒流时间或双时间线切换。更感兴趣的是: 如果玩家能够把自己的动作存下来，再在之后重新调用，这会不会形成一种更主动、更具策略性的解谜体验？
+              </p>
+              <p>
+                因此项目参考了《Braid》对时间机制的思考方式，《Titanfall 2》对玩法教学的节奏控制，以及《Super Mario Bros. Wonder》那种轻盈、清晰、充满可读性的关卡表达。
+              </p>
+            </article>
+
+            <article class="case-panel reveal reveal-delay">
+              <p class="eyebrow">BACKGROUND</p>
+              <h3>故事与角色</h3>
+              <figure class="image-slot image-slot-wide">
+                <figcaption>背景设定与 Mood Board 图片接口</figcaption>
+              </figure>
+              <p>
+                主角被设定为森林中的红蘑菇女孩伊莉斯。她意外得到一只神奇怀表，从而获得了记录与重放动作的能力。这个设定的作用不是单纯补一层剧情包装，而是帮助时间能力自然地嵌进世界观里。
+              </p>
+              <p>
+                叙事在这里的任务，是给玩家一个持续前进的理由: 体验不是孤立地解一串谜题，而是在逐步进入一个拥有规则、敌人和秘密的完整世界。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="mechanic" class="section">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">GAMEPLAY RULES</p>
+              <h2>玩法规则被尽量设计得明确: 先记录，再重放，然后让两段时间在空间里互相配合。</h2>
+            </div>
+            <div class="image-slot-grid reveal">
+              <figure class="image-slot">
+                <figcaption>Record 机制图接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>Replay 机制图接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>操作与角色动作图接口</figcaption>
+              </figure>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item reveal">
+                <p class="eyebrow">RULE 01</p>
+                <h2>Record 阶段</h2>
+                <p>
+                  在这个阶段里，玩家会把自己的移动、跳跃和关键操作记录下来。这个过程需要尽可能直接，所以 Record
+                  本身不应该让玩家产生额外负担，它更像是在告诉玩家:“你现在做的每个动作，之后都可以变成线索或工具。”
+                </p>
+              </div>
+              <div class="timeline-item reveal reveal-delay">
+                <p class="eyebrow">RULE 02</p>
+                <h2>Replay 阶段</h2>
+                <p>
+                  当玩家触发 Replay
+                  时，之前记录过的动作会被重新播放。这个时候真正有趣的地方才开始出现: 玩家当前控制的角色，可以和被重放出来的过去动作形成配合，从而到达原本无法抵达的平台、开关或路线。
+                </p>
+              </div>
+              <div class="timeline-item reveal reveal-delay-2">
+                <p class="eyebrow">RULE 03</p>
+                <h2>规则成立的关键</h2>
+                <p>
+                  这套玩法不是“加了两个按钮”就结束了。它必须满足三个条件: 玩家能理解 Record 和 Replay
+                  的区别，能预判 Replay 的结果，并愿意围绕这个结果重新规划路线。只有这三件事同时成立，这个系统才真正变成“玩法规则”，而不是单次噱头。
+                </p>
+              </div>
+            </div>
+            <div class="detail-grid">
+              <article class="detail-card reveal">
+                <p class="card-index">A1</p>
+                <h3>为什么要先 Record 再 Replay</h3>
+                <p>
+                  这里刻意避免让玩家直接获得一个万能回放技能，而是要求他们先做出选择，再承担这个选择的结果。这样一来，解谜的重点就从“反应快不快”转向“规划有没有想清楚”。
+                </p>
+              </article>
+              <article class="detail-card reveal reveal-delay">
+                <p class="card-index">B2</p>
+                <h3>为什么强调动作可读性</h3>
+                <p>
+                  因为如果玩家看不懂 Replay 到底重放了什么动作，就无法建立稳定心智模型。因此 UI、按钮图标、动作轨迹和时机反馈都服务于这一点。
+                </p>
+              </article>
+              <article class="detail-card reveal reveal-delay-2">
+                <p class="card-index">C3</p>
+                <h3>为什么要把输入说明放进关卡里</h3>
+                <p>
+                  为了避免玩家在页面外背说明书，控制教学被拆进了关卡推进里。也就是说，操作说明本身就是关卡设计的一部分。
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="levels" class="section section-muted bordered-top bordered-bottom">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">LEVEL DESIGN</p>
+              <h2>四个关卡层层递进，把“学会操作”逐步推进成“真正理解系统并运用它”。</h2>
+            </div>
+            <div class="image-slot-grid reveal">
+              <figure class="image-slot">
+                <figcaption>Level 1-2 图片接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>Level 3 图片接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>Boss 关卡图片接口</figcaption>
+              </figure>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item reveal">
+                <p class="eyebrow">LEVEL 1</p>
+                <h2>把基础移动和核心机制绑在一起</h2>
+                <p>
+                  第一关先教玩家移动、跳跃，再引入第一次必须使用 Record / Replay
+                  才能通过的障碍。这里故意让奖励、路径和隐藏平台都围绕这个初次体验展开，目的是让玩家尽快意识到: 这套能力不是附加项，而是整款游戏的基础语言。
+                </p>
+              </div>
+              <div class="timeline-item reveal reveal-delay">
+                <p class="eyebrow">LEVEL 2</p>
+                <h2>加入梯子和误导性变化</h2>
+                <p>
+                  第二关引入梯子后，重点不只是难度提升，而是开始加入“看似相似、实则有细微差异”的谜题。这样做的目的是让玩家放弃机械记忆，转而真正思考 Record 阶段里到底需要做什么动作，Replay 才会在后面成立。
+                </p>
+              </div>
+              <div class="timeline-item reveal reveal-delay-2">
+                <p class="eyebrow">LEVEL 3</p>
+                <h2>移动平台与垂直平台</h2>
+                <p>
+                  到第三关，平台本身开始成为 Record / Replay
+                  系统的一部分。玩家不再只是记住角色的动作，而是要考虑环境何时被操控、平台在何时处于什么位置。这样谜题就从“角色解谜”升级为“角色与环境共同解谜”。
+                </p>
+              </div>
+              <div class="timeline-item reveal">
+                <p class="eyebrow">LEVEL 4 / BOSS</p>
+                <h2>把前面学过的一切集中兑现</h2>
+                <p>
+                  最后 Boss
+                  关不是单纯提高数值难度，而是把前面学过的移动、平台控制、时序判断和 Replay 协作全部集中起来。这一关的意义在于证明整套系统可以支撑完整体验，而不仅是局部谜题。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="design" class="section">
+          <div class="container case-grid">
+            <article class="case-panel reveal">
+              <p class="eyebrow">DESIGN DECISION</p>
+              <h3>为什么这样安排教学和节奏</h3>
+              <p>
+                这个项目最重要的设计任务之一，是控制玩家第一次接触核心机制时的理解成本。Record / Replay
+                本身并不难懂，但玩家很容易在“会按按钮”和“真的明白这套系统怎么工作”之间卡住。
+              </p>
+              <p>
+                所以教学被拆成许多很小的、能立刻验证的瞬间。每次引入新元素时，都会先给一个低风险的成功案例，让玩家迅速获得“原来如此”的反馈，再逐渐加入变化和误导。
+              </p>
+            </article>
+
+            <article class="case-panel reveal reveal-delay">
+              <p class="eyebrow">UI & FLOW</p>
+              <h3>界面与流程也必须服务机制</h3>
+              <figure class="image-slot image-slot-wide">
+                <figcaption>UI、菜单、流程图接口</figcaption>
+              </figure>
+              <p>
+                UI 中加入了动态背景、呼吸式标题变化、机制触发时的画面反馈和清晰的输入提示，这些都不是装饰，而是在帮玩家不断确认当前自己处于哪个阶段、刚刚发生了什么、接下来应该尝试什么。
+              </p>
+              <p>
+                关卡流同样重要。每一关都要让玩家明确知道“这一关新增了什么”、 “要把什么旧知识和新知识连接起来”，这样系统才能稳定建立，而不会被误以为只是随机试错。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="tech" class="section bordered-top">
+          <div class="container case-grid">
+            <article class="case-panel reveal">
+              <p class="eyebrow">PROBLEM-SOLVING</p>
+              <h3>技术落地过程中，最难解决的是让 Replay 真的可信</h3>
+              <p>
+                一开始，曾尝试直接记录角色的相对位置，再在 Replay
+                阶段把这些位置重新播放出来。但很快就遇到了严重问题: 角色会穿模、会在空中不断下落，甚至会出现 Record 和 Replay
+                结果不对称的情况。
+              </p>
+              <p>
+                之后调整思路，开始记录更多和物理状态相关的内容，例如 `velocity`、`ground
+                check` 和 `gravityScale`
+                等参数。这样虽然增加了系统复杂度，但 Replay 的稳定性才真正建立起来。
+              </p>
+              <p>
+                最后，还处理了帧率对重放精度的影响，把很多最难察觉却最致命的问题压到了可控范围内。这部分工作直接决定了玩法是否成立，因为只要 Replay
+                不可靠，前面所有关卡设计都会失去说服力。
+              </p>
+            </article>
+
+            <article class="case-panel reveal reveal-delay">
+              <p class="eyebrow">TEST & ITERATION</p>
+              <h3>测试结果说明: 好的机制还需要好的引导</h3>
+              <figure class="image-slot image-slot-wide">
+                <figcaption>测试与迭代图片接口</figcaption>
+              </figure>
+              <p>
+                经过多轮测试，逐渐发现真正拖慢玩家的并不总是难度本身，而是他们第一次接触 Record / Replay
+                时是否能快速理解“这套规则到底想让玩家做什么”。因此后续又回过头优化了很多教程节点和提示方式。
+              </p>
+              <p>
+                未来如果继续扩展，希望把这套系统进一步拟人化，让 Record / Replay
+                不只作为 UI 元素出现，而是变成故事里真正有身份的存在。同时，也希望把这套玩法推进到更复杂的场景交互上，例如钥匙、门、机关或者可被重复利用的环境对象。
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

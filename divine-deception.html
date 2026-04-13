@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divine Deception | 陈品元作品集</title>
+    <meta
+      name="description"
+      content="Divine Deception 案例页，详细展示桌游世界观、规则设计、卡牌系统、平衡思路与测试迭代。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell divine-page">
+      <header class="site-header">
+        <div class="container nav-row">
+          <a class="brand" href="index.html">CHEN PINYUAN</a>
+          <nav class="site-nav" aria-label="项目导航">
+            <a href="#overview">概览</a>
+            <a href="#world">背景</a>
+            <a href="#rules">规则</a>
+            <a href="#cards">卡牌</a>
+            <a href="#design">设计</a>
+            <a href="#result">总结</a>
+            <a href="index.html">返回首页</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section-hero project-hero divine-hero">
+          <div class="container">
+            <p class="eyebrow reveal">CASE 01 / BOARD GAME DESIGN</p>
+            <h1 class="hero-title project-title reveal">
+              DIVINE
+              <span>DECEPTION</span>
+            </h1>
+            <div class="project-meta reveal reveal-delay">
+              <p>类型: 合作 + 欺骗桌游</p>
+              <p>人数: 5 / 7 / 9 / 11 人</p>
+              <p>重点: 世界观 / 卡牌系统 / 回合规则 / 博弈平衡</p>
+            </div>
+            <div class="image-slot-grid reveal reveal-delay-2">
+              <figure class="image-slot">
+                <figcaption>封面图接口 / Hero Cover</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>规则总览图接口 / Rule Overview</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="hero-marquee" aria-hidden="true">ABYSSOS</div>
+        </section>
+
+        <section id="overview" class="section bordered-top">
+          <div class="container split-grid">
+            <div class="section-heading reveal">
+              <p class="eyebrow">PROJECT GOAL</p>
+              <h2>这是一款“表面在合作、内里在试探彼此”的多人桌游，而不是简单的阵营对抗。</h2>
+            </div>
+            <div class="about-copy reveal reveal-delay">
+              <p>
+                在《Divine Deception》里，玩家会被放进一个必须不断交流、判断、拉拢和背叛的局面里。玩家的目标不是单纯击败另一个阵营，
+                而是在多轮合作和欺骗中最大化自己的分数，并最终成为唯一胜者。
+              </p>
+              <p>
+                这个项目同时追求两件事：第一，规则要足够清楚，让新玩家能快速上手；第二，局势要足够不稳定，
+                让熟悉规则之后的重心自然转移到“读人”“猜测动机”和“管理风险”上。
+              </p>
+              <blockquote class="pull-quote">
+                “重点不在于一轮里谁赢，而在于玩家如何在每一轮都重新判断信任关系。”
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section id="world" class="section section-muted bordered-top bordered-bottom">
+          <div class="container case-grid">
+            <article class="case-panel reveal">
+              <p class="eyebrow">BACKGROUND</p>
+              <h3>深渊界与秘密联盟</h3>
+              <p>
+                故事被设定在名为 Abyssos 的神秘领域中，让天使与恶魔长期对立，构成最基础的阵营张力。真正有趣的部分，
+                是在这层对立关系之上再加入“秘密合作”的可能性，让敌对双方也可能因为共同利益短暂联手。
+              </p>
+              <p>
+                这样做的好处是，世界观不只是外壳，它直接服务玩法。玩家会天然接受“明面阵营”和“暗地合作”并存的状态，
+                也会更容易进入彼此猜疑的心理氛围。
+              </p>
+            </article>
+
+            <article class="case-panel reveal reveal-delay">
+              <p class="eyebrow">MOOD BOARD</p>
+              <h3>视觉方向</h3>
+              <figure class="image-slot image-slot-wide">
+                <figcaption>Mood Board 图片接口</figcaption>
+              </figure>
+              <p>
+                在视觉上，项目使用黑金配色、宗教感符号、动物隐喻和粗线条装饰，让整套作品呈现出一种神圣却危险的气质。
+                这种气质和“信任外表之下隐藏算计”的玩法内核是统一的。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="rules" class="section">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">GAME RULES</p>
+              <h2>规则被设计成非常明确的回合结构，让玩家能快速进入博弈，而不是被说明书绊住。</h2>
+            </div>
+            <div class="image-slot-grid reveal">
+              <figure class="image-slot">
+                <figcaption>开局与座位图接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>回合流程图接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>胜负条件图接口</figcaption>
+              </figure>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item reveal">
+                <p class="eyebrow">STEP 01</p>
+                <h2>开局配置</h2>
+                <p>
+                  游戏开始前，所有玩家围成一圈。每位玩家各自抽取两张不同阵营牌，并记住自己的位置、左边和右边两名玩家的位置关系。
+                  这样的设计能把“邻座关系”“私聊对象”和“顺时针事件”都纳入规则里。
+                </p>
+              </div>
+              <div class="timeline-item reveal reveal-delay">
+                <p class="eyebrow">STEP 02</p>
+                <h2>事件阶段与私聊阶段</h2>
+                <p>
+                  每轮开始时翻开一张事件卡，决定本轮的特殊条件。随后进入私聊阶段，玩家可以根据当前事件和自己手中的能力卡与其他人谈判、
+                  结盟或误导。这个阶段是整个游戏最重要的心理博弈空间。
+                </p>
+              </div>
+              <div class="timeline-item reveal reveal-delay-2">
+                <p class="eyebrow">STEP 03</p>
+                <h2>选择、能力与结算</h2>
+                <p>
+                  私聊结束后，玩家必须从两张阵营牌中选出一张作为本轮立场。随后能力卡生效，最后根据两阵营人数和事件效果结算分数。
+                  能力被放在这个位置，是为了让“预测”和“反制”都能在最后一刻起作用。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="cards" class="section section-muted bordered-top bordered-bottom">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">CARD SYSTEM</p>
+              <h2>卡牌系统被拆成三个层次，让它既容易理解，也能持续制造变化。</h2>
+            </div>
+            <div class="image-slot-grid reveal">
+              <figure class="image-slot">
+                <figcaption>阵营卡图片接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>事件卡图片接口</figcaption>
+              </figure>
+              <figure class="image-slot">
+                <figcaption>能力卡图片接口</figcaption>
+              </figure>
+            </div>
+            <div class="detail-grid">
+              <article class="detail-card reveal">
+                <p class="card-index">A1</p>
+                <h3>阵营卡</h3>
+                <p>
+                  阵营卡是每轮最核心的选择来源。它看起来简单，但实际上承载了隐藏信息、读心和人数控制等多层作用。
+                  玩家每轮都在“选一个阵营”与“暴露一种倾向”之间做取舍。
+                </p>
+              </article>
+              <article class="detail-card reveal reveal-delay">
+                <p class="card-index">B2</p>
+                <h3>事件卡</h3>
+                <p>
+                  事件卡负责打破稳定局势。它会改变当前轮次里哪些策略更有利，让玩家无法始终依赖同一种博弈方式。
+                  它被当成推动社交对话的发动机，而不只是随机效果来源。
+                </p>
+              </article>
+              <article class="detail-card reveal reveal-delay-2">
+                <p class="card-index">C3</p>
+                <h3>能力卡</h3>
+                <p>
+                  能力卡主要给落后方或失败玩家提供再进入局势的机会。这样一来，失败不会只是被动吃亏，
+                  而是有机会在下一轮转化成针对局势的反击资源。
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="design" class="section">
+          <div class="container case-grid">
+            <article class="case-panel reveal">
+              <p class="eyebrow">DESIGN DECISION</p>
+              <h3>为什么强调私聊</h3>
+              <p>
+                这个项目最核心的设计决定，是把私聊放进规则中心，而不是只让玩家在公开桌面上表态。因为一旦允许私下建立临时联盟，
+                玩家之间的关系就不再是静态阵营关系，而会变成不断变化的交换网络。
+              </p>
+              <p>
+                这也让“合作成功”和“个人得分最大化”这两种目标被故意拉开，迫使玩家做出更复杂的社交决策。
+              </p>
+            </article>
+
+            <article class="case-panel reveal reveal-delay">
+              <p class="eyebrow">BALANCE</p>
+              <h3>如何看待平衡</h3>
+              <p>
+                对这个项目来说，平衡不只是数值平均，而是确保每种行为都看起来“值得尝试”。如果某个事件卡太弱，玩家就不会认真讨论它；
+                如果某种阵营策略过强，社交层就会被压扁。
+              </p>
+              <p>
+                后续最重要的工作，是继续调整事件卡和能力卡的影响力，让它们都能真正改变谈判内容和选择压力。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="result" class="section bordered-top">
+          <div class="container case-grid">
+            <article class="case-panel reveal">
+              <p class="eyebrow">ALPHA TEST</p>
+              <h3>原型测试</h3>
+              <figure class="image-slot image-slot-wide">
+                <figcaption>实体测试图接口</figcaption>
+              </figure>
+              <p>
+                项目已经推进到实体原型测试阶段。测试的重点不是“大家会不会玩”，而是“大家会不会开始试探、撒谎、互相套话”，
+                因为这才是这个项目真正成立的标志。
+              </p>
+            </article>
+
+            <article class="case-panel reveal reveal-delay">
+              <p class="eyebrow">FUTURE WORK</p>
+              <h3>后续补充方向</h3>
+              <p>
+                后续会继续扩充卡牌池、微调不同人数下的平衡，并探索更适合家庭娱乐和更适合核心桌游玩家的两个版本方向。
+              </p>
+              <p>
+                如果继续完善网页展示，也会补上更多卡牌特写、原型测试摆盘和不同局势示意图。
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

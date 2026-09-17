@@ -1,178 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>陈品元 | Game Portfolio</title>
-    <meta
-      name="description"
-      content="陈品元的个人游戏作品集，展示桌游设计、2D 平台解谜与 3D 潜行解谜项目。"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="container nav-row">
-          <a class="brand" href="index.html">CHEN PINYUAN</a>
-          <nav class="site-nav" aria-label="主导航">
-            <a href="#work">作品</a>
-            <a href="#method">方法</a>
-            <a href="#about">关于</a>
-            <a href="#contact">联系</a>
-          </nav>
-        </div>
-      </header>
-
-      <main>
-        <section class="hero section section-hero">
-          <div class="container hero-grid">
-            <div class="hero-copy reveal">
-              <p class="eyebrow">GAME / BOARD GAME / LEVEL DESIGN / VISUAL DESIGN</p>
-              <h1 class="hero-title">
-                项目经验
-                <span>做成可以进入的作品现场</span>
-              </h1>
-              <p class="hero-lead">
-                这是个人游戏作品集。首页先建立气质和记忆点，再用案例页把背景、机制、关卡、视觉和技术问题讲清楚，
-                让每个项目都不只是截图陈列，而是能被完整理解的设计过程。
-              </p>
-              <div class="hero-actions">
-                <a class="link-button" href="#work">
-                  查看项目
-                  <span aria-hidden="true"></span>
-                </a>
-                <a class="outline-button" href="lost-realm.html">打开最新案例</a>
-              </div>
-            </div>
-
-            <aside class="hero-panel reveal reveal-delay">
-              <p class="panel-kicker">CURRENT STATUS</p>
-              <ul class="stat-list">
-                <li>
-                  <span class="stat-value">03</span>
-                  <span class="stat-label">已接入真实项目</span>
-                </li>
-                <li>
-                  <span class="stat-value">03</span>
-                  <span class="stat-label">核心展示项目</span>
-                </li>
-                <li>
-                  <span class="stat-value">NO JAM</span>
-                  <span class="stat-label">不含 gamejam 项目</span>
-                </li>
-              </ul>
-            </aside>
-          </div>
-          <div class="hero-marquee" aria-hidden="true">PORTFOLIO</div>
-        </section>
-
-        <section id="work" class="section bordered-top">
-          <div class="container">
-            <div class="section-heading reveal">
-              <p class="eyebrow">SELECTED WORK</p>
-              <h2>这里放的是最优先展示的三个项目，每个项目都已经有独立详情页。</h2>
-              <p class="section-copy">
-                每一行都是一个入口。左边是封面图接口，右边是项目的简短定位；点进去之后，可以继续看更完整的设计拆解。
-              </p>
-            </div>
-
-            <div class="work-list" aria-label="作品列表">
-              <a class="work-row reveal divine-row" href="divine-deception.html">
-                <div class="work-thumb work-thumb-divine" aria-hidden="true"></div>
-                <div class="work-copy">
-                  <p class="card-index">01 / BOARD GAME DESIGN</p>
-                  <h3>DIVINE DECEPTION</h3>
-                  <p>合作、欺骗和私聊博弈被放进同一个桌游系统里，重点展示世界观、美术语言、卡牌系统和多人规则设计。</p>
-                  <span class="ghost-link">查看详情<span></span></span>
-                </div>
-              </a>
-
-              <a class="work-row reveal reveal-delay memorizer-row" href="memorizer.html">
-                <div class="work-thumb work-thumb-memorizer" aria-hidden="true"></div>
-                <div class="work-copy">
-                  <p class="card-index">02 / 2D PUZZLE PLATFORMER</p>
-                  <h3>MEMORIZER</h3>
-                  <p>这是一个围绕 Record / Replay 机制展开的 2D 平台解谜项目，内容覆盖核心玩法、关卡推进、UI、Boss 和技术迭代。</p>
-                  <span class="ghost-link">查看详情<span></span></span>
-                </div>
-              </a>
-
-              <a class="work-row reveal reveal-delay-2 lost-row" href="lost-realm.html">
-                <div class="work-thumb work-thumb-lost" aria-hidden="true"></div>
-                <div class="work-copy">
-                  <p class="card-index">03 / 3D STEALTH PUZZLE ADVENTURE</p>
-                  <h3>LOST REALM</h3>
-                  <p>潜行、机关解谜、地图流线和 Unreal 蓝图交互被整合进一个 3D 冒险关卡里，重点展示空间推进和系统落地。</p>
-                  <span class="ghost-link">查看详情<span></span></span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section id="method" class="section section-muted bordered-top bordered-bottom">
-          <div class="container split-grid">
-            <div class="section-heading reveal">
-              <p class="eyebrow">DESIGN METHOD</p>
-              <h2>首页被当成入口，详情页被当成解释器，结构统一，但每个项目保留自己的气质。</h2>
-            </div>
-
-            <div class="method-list">
-              <article class="method-item reveal">
-                <span class="method-number">01</span>
-                <div>
-                  <h3>先让人记住项目</h3>
-                  <p>先用标题、封面和关键词建立第一印象，再用很短的摘要告诉访客这个项目最值得看的地方是什么。</p>
-                </div>
-              </article>
-              <article class="method-item reveal reveal-delay">
-                <span class="method-number">02</span>
-                <div>
-                  <h3>再展开设计过程</h3>
-                  <p>详情页不是简单堆图，而是围绕背景、机制、关卡、视觉、问题和迭代来组织内容。</p>
-                </div>
-              </article>
-              <article class="method-item reveal reveal-delay-2">
-                <span class="method-number">03</span>
-                <div>
-                  <h3>统一系统方便继续补</h3>
-                  <p>虽然三个项目气质不同，但页面结构和交互规则保持一致，这样后面继续补图、补文案、补新项目都会更顺。</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" class="section">
-          <div class="container split-grid">
-            <div class="section-heading reveal">
-              <p class="eyebrow">ABOUT</p>
-              <h2>作品集主体内容现在已经进入可展示状态。</h2>
-            </div>
-            <div class="about-copy reveal reveal-delay">
-              <p>现在网站已经完整接入三个主项目，而且每个项目都有独立详情页。如果继续往下精修，优先级会是补真实封面图、调整中英文排版层级、把导航和联系信息做得更完整。</p>
-              <p>现在的结构仍然是原生 HTML、CSS 和 JavaScript，所以后面替换图片、链接和文案都会很方便。</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="section bordered-top">
-          <div class="container cta-block reveal">
-            <p class="eyebrow">NEXT</p>
-            <h2>下一步还可以继续把这个站点修成更像正式上线版的作品集。</h2>
-            <p class="section-copy">比如补真实封面图、统一中英文字体层级、加项目切换导航、加入联系方式和简历下载入口。</p>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <script src="main.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="陈品元的游戏设计作品集：六个玩法与关卡项目，包含个人原型、桌游和团队 GameJam。">
+<meta name="theme-color" content="#0a0a0a">
+<title>游戏与关卡设计作品集 | 陈品元</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<a class="skip" href="#main">跳转到内容</a>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="陈品元，返回首页">CP<span>Y.</span>
+</a>
+<span class="header-name">CHEN PINYUAN / 陈品元</span>
+<nav aria-label="主导航">
+<a href="index.html#work">作品 <span>06</span>
+</a>
+<a href="index.html#about">关于</a>
+<a href="mailto:1027997849@qq.com">联系 <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</header>
+<main id="main">
+<section class="container home-hero">
+<div class="hero-top">
+<p class="eyebrow">LEVEL DESIGN / PLAYER GUIDANCE / PUZZLES</p>
+<span class="edition">PORTFOLIO / 2026</span>
+</div>
+<h1>DESIGN<br>
+<span>FOR PLAY.</span>
+</h1>
+<div class="hero-bottom">
+<p class="intro-name">陈品元<span>关卡策划 / Level Designer</span>
+</p>
+<p>围绕玩法组织空间与挑战，<br>关注玩家如何找到路线、理解能力并完成解谜。</p>
+<a class="text-link" href="#work">探索作品 ↓</a>
+</div>
+<a class="hero-feature" href="beneath-the-ice.html">
+<img src="assets/portfolio/ice-cover.webp" alt="冰面之下：水上工厂的 3D 关卡白盒" fetchpriority="high">
+<span class="feature-label">SPATIAL STUDY / 3D BLOCKOUT</span>
+<span class="feature-title">冰面之下 <span aria-hidden="true">↗</span>
+</span>
+</a>
+</section>
+<section class="container work-section" id="work">
+<div class="section-heading">
+<div>
+<p class="eyebrow">SELECTED WORK / 01—06</p>
+<h2>玩法，落在作品里。</h2>
+</div>
+<p>个人项目与团队创作<br>从桌面规则到三维空间</p>
+</div>
+<a class="work-row" href="memorizer.html">
+<div class="work-image">
+<img src="assets/portfolio/page-12-07.webp" alt="Memorizer 游戏画面与作品设计" loading="lazy" decoding="async">
+<span class="work-number">01</span>
+</div>
+<div class="work-copy">
+<p class="eyebrow">GAMEPLAY / SYSTEMS</p>
+<h3>Memorizer</h3>
+<p>记录一段动作，在新的位置重放。将移动、跳跃与机关操作重新组合，抵达原本无法到达的地方。</p>
+<div class="work-meta">
+<span>个人项目</span>
+<span>2D 平台解谜</span>
+</div>
+<span class="row-link">查看项目 <span aria-hidden="true">↗</span>
+</span>
+</div>
+</a>
+<a class="work-row" href="beneath-the-ice.html">
+<div class="work-image">
+<img src="assets/portfolio/ice-cover.webp" alt="冰面之下 游戏画面与作品设计" loading="lazy" decoding="async">
+<span class="work-number">02</span>
+</div>
+<div class="work-copy">
+<p class="eyebrow">LEVEL DESIGN / SPATIAL PUZZLE</p>
+<h3>冰面之下</h3>
+<p>冰既能铺出道路，也能打开空间。在水上工厂中逐步掌握冰冻与破冰，再从熟悉场景的另一面寻找出口。</p>
+<div class="work-meta">
+<span>个人作品</span>
+<span>3D 关卡白盒</span>
+</div>
+<span class="row-link">查看项目 <span aria-hidden="true">↗</span>
+</span>
+</div>
+</a>
+<a class="work-row" href="lost-realm.html">
+<div class="work-image">
+<img src="assets/portfolio/page-19-02.webp" alt="Lost Realm 游戏画面与作品设计" loading="lazy" decoding="async">
+<span class="work-number">03</span>
+</div>
+<div class="work-copy">
+<p class="eyebrow">LEVEL DESIGN / BLUEPRINT</p>
+<h3>Lost Realm</h3>
+<p>通过潜行、机关与空间变化，探索三层箱庭。让玩家在学习规则的同时，逐步建立对整张地图的理解。</p>
+<div class="work-meta">
+<span>个人项目</span>
+<span>3D 潜行解谜</span>
+</div>
+<span class="row-link">查看项目 <span aria-hidden="true">↗</span>
+</span>
+</div>
+</a>
+<a class="work-row" href="divine-deception.html">
+<div class="work-image">
+<img src="assets/portfolio/page-01-01.webp" alt="Divine Deception 游戏画面与作品设计" loading="lazy" decoding="async">
+<span class="work-number">04</span>
+</div>
+<div class="work-copy">
+<p class="eyebrow">BOARD GAME / SOCIAL DEDUCTION</p>
+<h3>Divine Deception</h3>
+<p>每轮私聊后秘密选择阵营：全员一致可以共同得分，足够少的少数派却能赢得更多。围绕承诺与人数预判，争取个人胜利。</p>
+<div class="work-meta">
+<span>个人项目</span>
+<span>多人策略桌游</span>
+</div>
+<span class="row-link">查看项目 <span aria-hidden="true">↗</span>
+</span>
+</div>
+</a>
+<a class="work-row" href="1000-action.html">
+<div class="work-image">
+<img src="assets/portfolio/action-cover.png" alt="1000, Action! 游戏画面与作品设计" loading="lazy" decoding="async">
+<span class="work-number">05</span>
+</div>
+<div class="work-copy">
+<p class="eyebrow">GAME JAM / LEVEL DESIGN</p>
+<h3>1000, Action!</h3>
+<p>像剪辑视频一样解谜。利用时间轴与遮罩改变事件的发生关系，在有限时间里构建因果推演的挑战。</p>
+<div class="work-meta">
+<span>团队项目</span>
+<span>时间编辑解谜</span>
+</div>
+<span class="row-link">查看项目 <span aria-hidden="true">↗</span>
+</span>
+</div>
+</a>
+<a class="work-row" href="peng-win.html">
+<div class="work-image">
+<img src="assets/portfolio/peng-cover.png" alt="Peng-Win! 游戏画面与作品设计" loading="lazy" decoding="async">
+<span class="work-number">06</span>
+</div>
+<div class="work-copy">
+<p class="eyebrow">GAME JAM / PUZZLE DESIGN</p>
+<h3>Peng-Win!</h3>
+<p>踢动企鹅，预测滑行终点。利用冰面、水面和箱子改变路径，将企鹅送进雪橇。</p>
+<div class="work-meta">
+<span>团队项目</span>
+<span>2.5D 网格解谜</span>
+</div>
+<span class="row-link">查看项目 <span aria-hidden="true">↗</span>
+</span>
+</div>
+</a>
+</section>
+<section id="about" class="about-section">
+<div class="container about-grid">
+<div>
+<p class="eyebrow">ABOUT / 陈品元</p>
+<h2>关注规则，<br>也关注规则<br>
+<span>如何被理解。</span>
+</h2>
+</div>
+<div class="about-copy">
+<p class="lead">游戏设计与技术背景，关注玩法机制、解谜设计与关卡空间。</p>
+<p>在哥德堡大学攻读 Game Design and Technology 硕士。以计算机科学为基础，将设计想法转化为可运行的原型，再通过测试调整玩家的学习过程与挑战节奏。</p>
+<dl class="profile">
+<div>
+<dt>2025—2027</dt>
+<dd>哥德堡大学<br>Game Design and Technology · 硕士在读</dd>
+</div>
+<div>
+<dt>2020—2024</dt>
+<dd>北师香港浸会大学<br>计算机科学与技术 · 荣誉理学学士</dd>
+</div>
+<div>
+<dt>TOOLS</dt>
+<dd>Unity / Unreal Engine / C# / Blueprint<br>Git / Photoshop / Spine</dd>
+</div>
+</dl>
+</div>
+</div>
+</section>
+</main>
+<footer id="contact" class="container footer">
+<p class="eyebrow">LET’S MAKE SOMETHING PLAYABLE.</p>
+<h2>一起创造值得探索的体验。</h2>
+<a class="email" href="mailto:1027997849@qq.com">1027997849@qq.com <span aria-hidden="true">↗</span>
+</a>
+<div class="footer-bottom">
+<span>陈品元 · GAME & LEVEL DESIGN</span>
+<a href="#main">回到顶部 ↑</a>
+</div>
+</footer>
+<dialog id="image-viewer" aria-label="图片大图">
+<button class="viewer-close" aria-label="关闭大图">关闭 ×</button>
+<button class="viewer-zoom" aria-pressed="false">原尺寸查看</button>
+<div class="viewer-scroll">
+<img alt="">
+</div>
+<p>
+</p>
+</dialog>
+<script src="portfolio.js" defer>
+</script>
+</body>
 </html>

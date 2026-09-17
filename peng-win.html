@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="踢动企鹅，预测滑行终点。利用冰面、水面和箱子改变路径，将企鹅送进雪橇。">
+<meta name="theme-color" content="#0a0a0a">
+<title>Peng-Win! | 陈品元</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<a class="skip" href="#main">跳转到内容</a>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="陈品元，返回首页">CP<span>Y.</span>
+</a>
+<span class="header-name">CHEN PINYUAN / 陈品元</span>
+<nav aria-label="主导航">
+<a href="index.html#work">作品 <span>06</span>
+</a>
+<a href="index.html#about">关于</a>
+<a href="mailto:1027997849@qq.com">联系 <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</header>
+<main id="main">
+<div class="container">
+<section class="project-hero">
+<a class="back-link" href="index.html#work">← 全部作品</a>
+<p class="eyebrow">06 / GAME JAM / PUZZLE DESIGN</p>
+<h1>Peng-Win!</h1>
+<p class="project-english">ONE KICK. MANY POSSIBILITIES.</p>
+<p class="project-intro">踢动企鹅，预测滑行终点。利用冰面、水面和箱子改变路径，将企鹅送进雪橇。</p>
+<p class="award">Xmas Game Jam · 最佳游戏设计奖</p>
+<dl class="project-facts">
+<div>
+<dt>TYPE / 类型</dt>
+<dd>2.5D 网格解谜 · 团队项目</dd>
+</div>
+<div>
+<dt>PERIOD / 周期</dt>
+<dd>2025.12.12 — 2025.12.14 · 48 小时</dd>
+</div>
+<div>
+<dt>TOOLS / 工具</dt>
+<dd>Unity / C#</dd>
+</div>
+<div>
+<dt>CONTRIBUTION / 职责</dt>
+<dd>核心玩法、递进式关卡、箱子路径控制与设计迭代</dd>
+</div>
+</dl>
+<div class="project-links">
+<a class="text-link" href="https://scariett77.itch.io/peng-win" target="_blank" rel="noopener noreferrer">前往 itch.io 试玩 ↗</a>
+</div>
+<section class="gameplay-intro" id="gameplay" aria-labelledby="gameplay-title">
+<p class="eyebrow">HOW TO PLAY / 游戏介绍</p>
+<h2 id="gameplay-title">这是什么游戏，怎么玩？</h2>
+<p class="section-lead">一款单人网格解谜游戏。玩家调整踢击位置，让企鹅沿冰面和水面滑行，目标是将它送进雪橇。滑动会持续到遇到障碍或抵达目标，因此需要先规划停靠点。</p>
+<ol class="gameplay-loop">
+<li>
+<h3>观察路线</h3>
+<p>确认企鹅、雪橇、水面和障碍的位置，预测一次踢击会让企鹅停在哪里。</p>
+</li>
+<li>
+<h3>移动箱子</h3>
+<p>利用可推动箱子阻挡滑行、填补间隙或改变可用路径。</p>
+</li>
+<li>
+<h3>踢击并验证</h3>
+<p>从合适的方向踢动企鹅；根据滑行结果重新安排位置与路径。</p>
+</li>
+</ol>
+</section>
+<section class="case-overview" aria-label="项目阅读重点">
+<p class="eyebrow">DESIGN FOCUS / 滑行与路径控制</p>
+<h2>用简单的踢击，构建空间推演。</h2>
+<p>48 小时团队作品 · 核心玩法与关卡设计</p>
+<nav aria-label="重点内容">
+<a href="#section-1">玩法与箱子 <span aria-hidden="true">↓</span>
+</a>
+<a href="#section-2">个人贡献 <span aria-hidden="true">↓</span>
+</a>
+</nav>
+</section>
+</section>
+<div class="case-layout">
+<aside class="case-nav" aria-label="项目内容导航">
+<p class="eyebrow">IN THIS PROJECT</p>
+<a href="#gameplay">
+<span>00</span>游戏介绍与玩法</a>
+<a href="#section-1">
+<span>01</span>预测滑行终点，再决定从哪里踢。</a>
+<a href="#section-2">
+<span>02</span>围绕一个动作构建关卡。</a>
+</aside>
+<div>
+<section class="case-section" id="section-1">
+<p class="eyebrow">01 / DESIGN NOTES</p>
+<h2>预测滑行终点，再决定从哪里踢。</h2>
+<p class="section-lead">玩家在网格中调整位置，踢动企鹅，利用滑行惯性抵达雪橇。箱子用于阻挡、填补间隙或改变路径，让挑战集中在方向与终点的预判。</p>
+<div class="gallery">
+<figure class="figure">
+<a class="image-link" href="assets/portfolio/peng-gameplay.png" data-lightbox aria-label="点击查看大图：网格关卡：观察企鹅、箱子与终点的位置，再布置滑行路线。">
+<img src="assets/portfolio/peng-gameplay.png" alt="网格关卡：观察企鹅、箱子与终点的位置，再布置滑行路线。" loading="lazy" decoding="async">
+</a>
+<figcaption>网格关卡：观察企鹅、箱子与终点的位置，再布置滑行路线。 <span>点击查看大图 +</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="case-section" id="section-2">
+<p class="eyebrow">02 / DESIGN NOTES</p>
+<h2>围绕一个动作构建关卡。</h2>
+<p class="section-lead">负责“踢动 + 滑行”的核心玩法、递进式关卡与箱子路径系统设计。作品由团队在 48 小时内完成，获得 Xmas Game Jam 最佳游戏设计奖；成员与可玩版本见项目主页。</p>
+<div class="gallery">
+</div>
+</section>
+</div>
+</div>
+<a class="next-project" href="memorizer.html">
+<span class="eyebrow">NEXT PROJECT</span>
+<strong>Memorizer <span aria-hidden="true">↗</span>
+</strong>
+</a>
+</div>
+</main>
+<footer id="contact" class="container footer">
+<p class="eyebrow">LET’S MAKE SOMETHING PLAYABLE.</p>
+<h2>一起创造值得探索的体验。</h2>
+<a class="email" href="mailto:1027997849@qq.com">1027997849@qq.com <span aria-hidden="true">↗</span>
+</a>
+<div class="footer-bottom">
+<span>陈品元 · GAME & LEVEL DESIGN</span>
+<a href="#main">回到顶部 ↑</a>
+</div>
+</footer>
+<dialog id="image-viewer" aria-label="图片大图">
+<button class="viewer-close" aria-label="关闭大图">关闭 ×</button>
+<button class="viewer-zoom" aria-pressed="false">原尺寸查看</button>
+<div class="viewer-scroll">
+<img alt="">
+</div>
+<p>
+</p>
+</dialog>
+<script src="portfolio.js" defer>
+</script>
+</body>
+</html>

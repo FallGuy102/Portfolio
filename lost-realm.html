@@ -1,272 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lost Realm | 陈品元作品集</title>
-    <meta
-      name="description"
-      content="Lost Realm 案例页，展示潜行解谜、地图流线、关卡设计、Unreal 蓝图与迭代过程。"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell lost-page">
-      <header class="site-header">
-        <div class="container nav-row">
-          <a class="brand" href="index.html">CHEN PINYUAN</a>
-          <nav class="site-nav" aria-label="项目导航">
-            <a href="#overview">概览</a>
-            <a href="#mechanics">机制</a>
-            <a href="#map">地图</a>
-            <a href="#tech">蓝图</a>
-            <a href="index.html">返回首页</a>
-          </nav>
-        </div>
-      </header>
-
-      <main>
-        <section class="section section-hero project-hero lost-hero">
-          <div class="container">
-            <p class="eyebrow reveal">CASE 03 / 3D STEALTH PUZZLE ADVENTURE</p>
-            <h1 class="hero-title project-title reveal">
-              LOST
-              <span>REALM</span>
-            </h1>
-            <div class="project-meta reveal reveal-delay">
-              <p>类型: 3D 潜行解谜冒险</p>
-              <p>重点: 地下堡垒 / 机关谜题 / 潜行战斗 / UE 蓝图</p>
-              <p>工具: Unreal Engine / 白模迭代 / Blueprint 交互</p>
-            </div>
-            <div class="image-slot-grid reveal reveal-delay-2">
-              <figure class="image-slot">
-                <figcaption>封面图接口 / Hero Cover</figcaption>
-              </figure>
-              <figure class="image-slot">
-                <figcaption>场景总览图接口</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="hero-marquee" aria-hidden="true">RELIC</div>
-        </section>
-
-        <section id="overview" class="section bordered-top">
-          <div class="container split-grid">
-            <div class="section-heading reveal">
-              <p class="eyebrow">INTRODUCTION</p>
-              <h2>这是一个把潜行、机关解谜和空间推进真正揉在一起的 3D 冒险关卡。</h2>
-            </div>
-            <div class="about-copy reveal reveal-delay">
-              <p>
-                《Lost Realm》是一款 3D 潜行解谜项目。玩家会进入一座表面像军事地下堡垒、
-                深处却藏着古老宫殿气质的空间里，让探索、潜行、交互机关和叙事线索一起推动前进。
-              </p>
-              <p>
-                这个项目的重点不只是“解开谜题”，而是让玩家在仓库、走廊、展览厅、宫殿和地下区域之间逐步感受到空间推进、
-                节奏变化和目标不断被重新定义的过程。
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-muted bordered-top bordered-bottom">
-          <div class="container case-grid">
-            <article class="case-panel reveal">
-              <p class="eyebrow">BACKGROUND</p>
-              <h3>寻宝者与失落文明</h3>
-              <p>
-                主角被设定成对古代文明着迷的寻宝者埃里克，他会追随亚特兰蒂斯的线索，进入希尔瓦斯森林上方废墟之下的地下要塞。
-              </p>
-              <p>
-                这个背景一方面给潜行和机关解谜提供了合理容器，另一方面也让后续的宫殿、雕像和红色水晶球这些视觉元素有了叙事支点。
-              </p>
-            </article>
-
-            <article class="case-panel reveal reveal-delay">
-              <p class="eyebrow">REFERENCE</p>
-              <h3>参考与角色设定</h3>
-              <figure class="image-slot image-slot-wide">
-                <figcaption>参考图 / Character Setting 接口</figcaption>
-              </figure>
-              <p>
-                这个项目的灵感来自《神秘海域》系列、《最后生还者》和《耻辱 2》的 Clockwork Mansion 关卡。
-              </p>
-              <p>
-                项目希望同时具备遗迹探险的吸引力，并让机关、敌人巡逻和空间结构彼此咬合，形成稳定的关卡语言。
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="mechanics" class="section">
-          <div class="container">
-            <div class="section-heading reveal">
-              <p class="eyebrow">GAME MECHANICS</p>
-              <h2>潜行、机关和文本线索被一起设计成系统，而不是彼此割裂。</h2>
-            </div>
-            <div class="image-slot-grid reveal">
-              <figure class="image-slot">
-                <figcaption>潜行系统图接口</figcaption>
-              </figure>
-              <figure class="image-slot">
-                <figcaption>机关道具图接口</figcaption>
-              </figure>
-              <figure class="image-slot">
-                <figcaption>交互物件图接口</figcaption>
-              </figure>
-            </div>
-            <div class="detail-grid">
-              <article class="detail-card reveal">
-                <p class="card-index">A1</p>
-                <h3>潜行机制</h3>
-                <p>项目通过蹲伏、视线规避、无声移动和背刺时机来建立潜行节奏，让敌人巡逻成为空间阅读的一部分。</p>
-              </article>
-              <article class="detail-card reveal reveal-delay">
-                <p class="card-index">B2</p>
-                <h3>机关谜题</h3>
-                <p>拉杆、电池、电池盒、旋转地面和按钮共同构成多步解谜，重点在于逻辑关联和重复利用已学会的知识。</p>
-              </article>
-              <article class="detail-card reveal reveal-delay-2">
-                <p class="card-index">C3</p>
-                <h3>文本与线索</h3>
-                <p>书本、笔记和散落文本负责补充机关解释和世界细节，让空间不只是功能性的，也能承担叙事表达。</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="map" class="section section-muted bordered-top bordered-bottom">
-          <div class="container">
-            <div class="section-heading reveal">
-              <p class="eyebrow">MAP & FLOW</p>
-              <h2>地图推进围绕 Introduce、Practice、Master、Twist 四个节奏阶段展开。</h2>
-            </div>
-            <div class="image-slot-grid reveal">
-              <figure class="image-slot">
-                <figcaption>地图总览图接口</figcaption>
-              </figure>
-              <figure class="image-slot">
-                <figcaption>Game Flow 图接口</figcaption>
-              </figure>
-              <figure class="image-slot">
-                <figcaption>关卡分区图接口</figcaption>
-              </figure>
-            </div>
-            <div class="timeline">
-              <div class="timeline-item reveal">
-                <p class="eyebrow">INTRODUCE</p>
-                <h2>入口区</h2>
-                <p>先通过教学式谜题介绍拉杆、电池、电池盒和基础潜行，让玩家理解交互逻辑再进入主体空间。</p>
-              </div>
-              <div class="timeline-item reveal reveal-delay">
-                <p class="eyebrow">PRACTICE</p>
-                <h2>一楼与 Z 字走廊</h2>
-                <p>这里把玩家从机关解谜过渡到潜行战斗，通过双敌人和折线路径训练视线规避与行动时机。</p>
-              </div>
-              <div class="timeline-item reveal reveal-delay-2">
-                <p class="eyebrow">MASTER / TWIST</p>
-                <h2>二楼、大厅与地下区域</h2>
-                <p>后半段要求玩家综合使用前面学到的所有系统，并通过 Boss 式空间变化完成最终收束。</p>
-              </div>
-            </div>
-
-            <div class="case-grid rules-grid">
-              <article class="case-panel reveal">
-                <p class="eyebrow">SECOND FLOOR</p>
-                <h3>二楼与展览厅挑战</h3>
-                <p>
-                  二楼被做成一个兼顾战斗、探索和机关观察的区域。餐厅负责潜行节奏，展览厅负责图案与机关配合，
-                  可选房间则补充背景和奖励。
-                </p>
-                <p>
-                  这个部分的目标不是单纯增加内容量，而是让玩家在“已经掌握系统”的前提下真正开始主动组合它们。
-                </p>
-              </article>
-
-              <article class="case-panel reveal reveal-delay">
-                <p class="eyebrow">UNDERGROUND AREA</p>
-                <h3>地下区域与双电池谜题</h3>
-                <p>
-                  地下区域被设计成前面知识的重组场。玩家需要重新调用早期区域里的电池与电梯逻辑，才能解开最终路径。
-                </p>
-                <p>
-                  这样能让空间显得更真实，因为先前的系统不是被一次性消耗掉，而是在结尾重新变成关键答案。
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container case-grid">
-            <article class="case-panel reveal">
-              <p class="eyebrow">DESIGN DETAILS</p>
-              <h3>从白模到空间叙事</h3>
-              <figure class="image-slot image-slot-wide">
-                <figcaption>Design Details 图片接口</figcaption>
-              </figure>
-              <p>
-                入口走廊、仓库、展览厅和宫殿空间都在逐步强化“从冷色机械区到暖色遗迹区”的过渡，让玩家在视觉上也感受到目标越来越接近。
-              </p>
-              <p>
-                Z 字走廊和大空间转场的作用，不只是延长路径，而是控制视线、保持神秘感，并重新安排节奏。
-              </p>
-            </article>
-
-            <article class="case-panel reveal reveal-delay">
-              <p class="eyebrow">ITERATION</p>
-              <h3>地图与氛围的多轮调整</h3>
-              <figure class="image-slot image-slot-wide">
-                <figcaption>Iteration / White Mold 图接口</figcaption>
-              </figure>
-              <p>
-                地图体量、出口位置、餐厅区域形状和中央目标物都经过了反复调整，让关卡既更合理，也更能支持潜行玩法。
-              </p>
-              <p>
-                把圆盘替换成巨大雕像之后，空间叙事和玩家目标变得更明确，整体记忆点也更强。
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="tech" class="section bordered-top">
-          <div class="container case-grid">
-            <article class="case-panel reveal">
-              <p class="eyebrow">BLUEPRINTS</p>
-              <h3>UE 蓝图交互系统</h3>
-              <figure class="image-slot image-slot-wide">
-                <figcaption>Blueprint 截图接口</figcaption>
-              </figure>
-              <p>
-                因为关卡里有很多可交互的机械物体，所以蓝图是这个项目非常核心的一部分。拉杆、电池、电池盒和书籍等交互被统一接入接口逻辑，
-                让玩家靠近时能获得清晰反馈。
-              </p>
-              <p>
-                对拉杆这种物体，还加入了是否需要电池、是否为一次性使用和动画完成状态等判断，保证系统在复杂场景里也能稳定工作。
-              </p>
-            </article>
-
-            <article class="case-panel reveal reveal-delay">
-              <p class="eyebrow">PROBLEM SOLVING</p>
-              <h3>从 Unity 经验迁移到 Unreal</h3>
-              <p>
-                这是第一次把完整 3D 关卡和大量交互逻辑放进 Unreal 里，因此最大的挑战之一，是把原本熟悉的 Unity 思路翻译成 UE 的工作方式。
-              </p>
-              <p>
-                在这个过程中，一边摸索 Blueprint 的结构，一边验证哪些系统更适合线性关卡表达。最终确认，线性推进比最初尝试的半开放布局更有效。
-              </p>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <script src="main.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="通过潜行、机关与空间变化，探索三层箱庭。让玩家在学习规则的同时，逐步建立对整张地图的理解。">
+<meta name="theme-color" content="#0a0a0a">
+<title>Lost Realm | 陈品元</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<a class="skip" href="#main">跳转到内容</a>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="陈品元，返回首页">CP<span>Y.</span>
+</a>
+<span class="header-name">CHEN PINYUAN / 陈品元</span>
+<nav aria-label="主导航">
+<a href="index.html#work">作品 <span>06</span>
+</a>
+<a href="index.html#about">关于</a>
+<a href="mailto:1027997849@qq.com">联系 <span aria-hidden="true">↗</span>
+</a>
+</nav>
+</header>
+<main id="main">
+<div class="container">
+<section class="project-hero">
+<a class="back-link" href="index.html#work">← 全部作品</a>
+<p class="eyebrow">03 / LEVEL DESIGN / BLUEPRINT</p>
+<h1>Lost Realm</h1>
+<p class="project-english">READ THE SPACE.</p>
+<p class="project-intro">通过潜行、机关与空间变化，探索三层箱庭。让玩家在学习规则的同时，逐步建立对整张地图的理解。</p>
+<dl class="project-facts">
+<div>
+<dt>TYPE / 类型</dt>
+<dd>3D 潜行解谜 · 个人项目</dd>
+</div>
+<div>
+<dt>PERIOD / 周期</dt>
+<dd>2024.04 — 2024.07</dd>
+</div>
+<div>
+<dt>TOOLS / 工具</dt>
+<dd>Unreal Engine / Blueprint</dd>
+</div>
+<div>
+<dt>CONTRIBUTION / 职责</dt>
+<dd>三层箱庭布局、潜行解谜、交互蓝图与流程迭代</dd>
+</div>
+</dl>
+<div class="project-links">
+<a class="text-link" href="https://www.bilibili.com/video/BV1aV5Dz2EGF/" target="_blank" rel="noopener noreferrer">观看关卡演示 ↗</a>
+</div>
+<section class="gameplay-intro" id="gameplay" aria-labelledby="gameplay-title">
+<p class="eyebrow">HOW TO PLAY / 游戏介绍</p>
+<h2 id="gameplay-title">这是什么游戏，怎么玩？</h2>
+<p class="section-lead">一款结合潜行与机关解谜的单人 3D 探索游戏。玩家扮演寻宝者进入三层地下宫殿，避开或消灭守卫，解开机关并寻找宝藏。</p>
+<ol class="gameplay-loop">
+<li>
+<h3>观察与潜行</h3>
+<p>观察巡逻方向，利用蹲伏和掩体躲避视线，等待接近守卫背后的时机。</p>
+</li>
+<li>
+<h3>操作机关</h3>
+<p>使用杠杆、旋转平台和电池供电改变空间，打开原本无法通过的路径。</p>
+</li>
+<li>
+<h3>重访与推进</h3>
+<p>沿新通路探索，再回到熟悉区域，利用获得的道具和空间变化推进到宝藏与退出路径。</p>
+</li>
+</ol>
+</section>
+<figure class="video-figure">
+<iframe class="youtube-player" src="https://www.youtube-nocookie.com/embed/yDFRsF5Ki6g?rel=0&amp;playsinline=1" title="Lost Realm：玩法与关卡演示（YouTube）" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen>
+</iframe>
+<figcaption>Lost Realm · 玩法与关卡演示</figcaption>
+</figure>
+<div class="video-actions">
+<a class="text-link" href="https://www.youtube.com/watch?v=yDFRsF5Ki6g" target="_blank" rel="noopener noreferrer">在 YouTube 观看 ↗</a>
+</div>
+<section class="case-overview" aria-label="项目阅读重点">
+<p class="eyebrow">DESIGN FOCUS / 视线、路线与地标</p>
+<h2>让空间决定玩家何时观察、行动与重访。</h2>
+<p>个人 Unreal Engine 项目 · 潜行解谜与交互蓝图</p>
+<nav aria-label="重点内容">
+<a href="#section-1">潜行视线 <span aria-hidden="true">↓</span>
+</a>
+<a href="#section-2">目标预告 <span aria-hidden="true">↓</span>
+</a>
+<a href="#section-3">布局迭代 <span aria-hidden="true">↓</span>
+</a>
+</nav>
+</section>
+</section>
+<div class="case-layout">
+<aside class="case-nav" aria-label="项目内容导航">
+<p class="eyebrow">IN THIS PROJECT</p>
+<a href="#gameplay">
+<span>00</span>游戏介绍与玩法</a>
+<a href="#section-1">
+<span>01</span>用转折控制视线，用掩体改变节奏。</a>
+<a href="#section-2">
+<span>02</span>先看见谜题，再找到入口。</a>
+<a href="#section-3">
+<span>03</span>让地标参与整个流程。</a>
+</aside>
+<div>
+<section class="case-section" id="section-1">
+<p class="eyebrow">01 / DESIGN NOTES</p>
+<h2>用转折控制视线，用掩体改变节奏。</h2>
+<p class="section-lead">Z 形走廊不让玩家一眼看到目的地。矮掩体、巡逻朝向与转角共同决定移动时机：蹲伏隐藏，等待守卫转身，再接近背刺。这里也将前段的解谜节奏切换为潜行。</p>
+<div class="gallery">
+<figure class="figure">
+<a class="image-link" href="assets/portfolio/page-24-01.webp" data-lightbox aria-label="查看原始设计页：Z 形路线与矮掩体：先观察巡逻，再选择通过时机。">
+<span class="image-region" style="--region-ratio:1.53992;--image-width:153.84615%;--image-left:-6.15385%;--image-top:-18.66667%">
+<img src="assets/portfolio/page-24-01.webp" alt="Z 形路线与矮掩体：先观察巡逻，再选择通过时机。" loading="lazy" decoding="async">
+</span>
+</a>
+<figcaption>Z 形路线与矮掩体：先观察巡逻，再选择通过时机。 <span>查看原始设计页 +</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="case-section" id="section-2">
+<p class="eyebrow">02 / DESIGN NOTES</p>
+<h2>先看见谜题，再找到入口。</h2>
+<p class="section-lead">玩家隔着玻璃预览暂时无法进入的画廊，再寻找另一条路线。进入后，通过旋转地面改变与炮台射线的相对位置，逐步关闭炮台并解锁中央水晶。空间既预告目标，也构成解法。</p>
+<div class="gallery">
+<figure class="figure">
+<a class="image-link" href="assets/portfolio/page-26-01.webp" data-lightbox aria-label="查看原始设计页：二层路线：餐厅潜行之后进入画廊解谜，随后开启返回大厅的捷径。">
+<span class="image-region" style="--region-ratio:0.89995;--image-width:256.41026%;--image-left:-17.43590%;--image-top:-17.92208%">
+<img src="assets/portfolio/page-26-01.webp" alt="二层路线：餐厅潜行之后进入画廊解谜，随后开启返回大厅的捷径。" loading="lazy" decoding="async">
+</span>
+</a>
+<figcaption>二层路线：餐厅潜行之后进入画廊解谜，随后开启返回大厅的捷径。 <span>查看原始设计页 +</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="case-section" id="section-3">
+<p class="eyebrow">03 / DESIGN NOTES</p>
+<h2>让地标参与整个流程。</h2>
+<p class="section-lead">大厅中央圆盘在迭代中改为巨型雕像：先帮助定位，再作为机关打开下层，随后成为 Boss，倒下后形成通路。同一对象反复出现，但承担不同任务。</p>
+<div class="steps">
+<article>
+<p class="eyebrow">目标可见</p>
+<h3>出口从二楼移到一楼</h3>
+<p>扩大出口尺度，使玩家进入大厅时就能看到宝藏室，尽早建立长期目标。</p>
+</article>
+<article>
+<p class="eyebrow">重访空间</p>
+<h3>回收并重新分配电池</h3>
+<p>返回已探索区域，把已有道具用于退出路径，而不是不断引入新规则。</p>
+</article>
+</div>
+<div class="gallery">
+<figure class="figure">
+<a class="image-link" href="assets/portfolio/page-29-01.webp" data-lightbox aria-label="查看原始设计页：白盒迭代：中央圆盘改为雕像，同时调整餐厅布局与区域连接。">
+<span class="image-region" style="--region-ratio:3.75557;--image-width:107.52688%;--image-left:-3.76344%;--image-top:-21.81818%">
+<img src="assets/portfolio/page-29-01.webp" alt="白盒迭代：中央圆盘改为雕像，同时调整餐厅布局与区域连接。" loading="lazy" decoding="async">
+</span>
+</a>
+<figcaption>白盒迭代：中央圆盘改为雕像，同时调整餐厅布局与区域连接。 <span>查看原始设计页 +</span>
+</figcaption>
+</figure>
+</div>
+</section>
+</div>
+</div>
+<a class="next-project" href="divine-deception.html">
+<span class="eyebrow">NEXT PROJECT</span>
+<strong>Divine Deception <span aria-hidden="true">↗</span>
+</strong>
+</a>
+</div>
+</main>
+<footer id="contact" class="container footer">
+<p class="eyebrow">LET’S MAKE SOMETHING PLAYABLE.</p>
+<h2>一起创造值得探索的体验。</h2>
+<a class="email" href="mailto:1027997849@qq.com">1027997849@qq.com <span aria-hidden="true">↗</span>
+</a>
+<div class="footer-bottom">
+<span>陈品元 · GAME & LEVEL DESIGN</span>
+<a href="#main">回到顶部 ↑</a>
+</div>
+</footer>
+<dialog id="image-viewer" aria-label="图片大图">
+<button class="viewer-close" aria-label="关闭大图">关闭 ×</button>
+<button class="viewer-zoom" aria-pressed="false">原尺寸查看</button>
+<div class="viewer-scroll">
+<img alt="">
+</div>
+<p>
+</p>
+</dialog>
+<script src="portfolio.js" defer>
+</script>
+</body>
 </html>

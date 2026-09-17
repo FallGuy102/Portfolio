@@ -1,6 +1,7 @@
 """Generate static HTML from reviewed public project content. No private sources copied."""
 from pathlib import Path
 from html import escape as e
+from hashlib import sha256
 
 ROOT = Path(__file__).resolve().parents[1]
 A = 'assets/portfolio/'
@@ -106,7 +107,7 @@ def arrow_icon(direction="up-right"):
         "up": "M12 20V4m-7 7 7-7 7 7",
         "left": "M20 12H4m7-7-7 7 7 7",
     }
-    return f'<svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="{paths[direction]}"/></svg>'
+    return f'<svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="{paths[direction]}"/></svg>'
 
 def youtube_video(video_id, title):
     return f'''<figure class="video-figure"><iframe class="youtube-player" src="https://www.youtube-nocookie.com/embed/{e(video_id)}?rel=0&amp;playsinline=1" title="{e(title)}：玩法与关卡演示（YouTube）" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe><figcaption>{e(title)} · 玩法与关卡演示</figcaption></figure><div class="video-actions"><a class="text-link" href="https://www.youtube.com/watch?v={e(video_id)}" target="_blank" rel="noopener noreferrer">在 YouTube 观看 {arrow_icon()}</a></div>'''
@@ -122,12 +123,13 @@ def picture(file, caption, eager=False):
     return f'<figure class="figure"><a class="image-link" href="{A}{file}" data-lightbox aria-label="{hint[:-2]}：{e(caption)}">{img}</a><figcaption>{e(caption)} <span>{hint}</span></figcaption></figure>'
 
 def shell(title, desc, content):
+    css_version = sha256((ROOT / 'portfolio.css').read_bytes()).hexdigest()[:12]
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0a0a0a"><title>{e(title)} | 陈品元</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
 <body><a class="skip" href="#main">跳转到内容</a><header class="site-header"><a class="brand" href="index.html" aria-label="陈品元，返回首页">CP<span>Y.</span></a><span class="header-name">CHEN PINYUAN / 陈品元</span><nav aria-label="主导航"><a href="index.html#work">作品 <span>06</span></a><a href="index.html#about">关于</a><a href="mailto:1027997849@qq.com">联系 <span aria-hidden="true">{arrow_icon()}</span></a></nav></header>
 <main id="main">{content}</main>
 <footer id="contact" class="container footer"><p class="eyebrow">LET’S MAKE SOMETHING PLAYABLE.</p><h2>一起创造值得探索的体验。</h2><a class="email" href="mailto:1027997849@qq.com">1027997849@qq.com <span aria-hidden="true">{arrow_icon()}</span></a><div class="footer-bottom"><span>陈品元 · GAME & LEVEL DESIGN</span><a href="#main">回到顶部 {arrow_icon("up")}</a></div></footer>
-<dialog id="image-viewer" aria-label="图片大图"><button class="viewer-close" aria-label="关闭大图">关闭 ×</button><button class="viewer-zoom" aria-pressed="false">原尺寸查看</button><div class="viewer-scroll"><img alt=""></div><p></p></dialog><script src="portfolio.js" defer></script></body></html>'''.replace('href="styles.css"', 'href="portfolio.css"')
+<dialog id="image-viewer" aria-label="图片大图"><button class="viewer-close" aria-label="关闭大图">关闭 ×</button><button class="viewer-zoom" aria-pressed="false">原尺寸查看</button><div class="viewer-scroll"><img alt=""></div><p></p></dialog><script src="portfolio.js" defer></script></body></html>'''.replace('href="styles.css"', f'href="portfolio.css?v={css_version}"')
 
 def build_home():
     rows=''

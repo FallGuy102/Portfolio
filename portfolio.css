@@ -9,6 +9,9 @@
 dialog{background:#111;color:var(--foreground);border:1px solid #444;padding:64px 20px 20px;width:95vw;max-width:1800px;max-height:94dvh}dialog::backdrop{background:rgba(0,0,0,.9)}.viewer-close{position:absolute;right:20px;top:10px;min-height:44px;min-width:80px;background:none;color:var(--foreground);border:0;cursor:pointer}.viewer-scroll{overflow:auto;max-height:calc(94dvh - 130px)}.viewer-scroll img{margin:auto;max-width:none;width:100%;height:auto}dialog p{font-size:13px;margin-top:12px}.viewing-image{overflow:hidden}
 .youtube-player{display:block;width:100%;aspect-ratio:16/9;border:0;background:#111}.video-actions{margin-top:16px}.video-fallback{margin-top:20px;border:1px solid var(--border);padding:16px}.video-fallback summary{cursor:pointer;min-height:44px;display:list-item;line-height:44px;color:var(--muted)}.video-fallback summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.video-fallback video{width:100%;margin-top:16px}.video-fallback p{font-size:13px;margin-top:12px}.viewer-zoom{position:absolute;left:20px;top:10px;min-height:44px;background:none;color:var(--foreground);border:1px solid var(--border);padding:0 14px;cursor:pointer}.viewer-scroll img.native-size{width:auto;min-width:0;max-width:none}.viewer-scroll:has(.native-size){cursor:crosshair}
 .arrow-icon{display:inline-block;width:1em;height:1em;min-width:16px;min-height:16px;flex:none;vertical-align:-.125em}
+.text-link,.back-link,.row-link{white-space:nowrap}
+.hero-bottom>.text-link{flex-shrink:0}
+.feature-title>span{display:flex;align-items:center;flex:none}
 .feature-title,.next-project strong{align-items:center}
 .next-project strong>.arrow-icon{color:var(--accent)}
 .back-link,.footer-bottom a{gap:8px}
